@@ -1,0 +1,247 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+/*
+
+#16b792 - green
+#b7164e - red
+#169eb7 - light blue
+*/
+
+body{
+    background: #f7f7f7;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    margin-bottom: 20px;
+/*    border: 1px solid red;  !!! */
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 1px 1px 4px rgba(199, 199, 199, 0.3);
+    padding: 20px 10px;
+    
+}
+
+.user-links a{
+    text-decoration: none;
+    display: inline-block;
+    background: #16b792;
+    color: #fff;
+    padding: 10px 15px;
+}
+.user-links a:hover{
+    background: #169eb7;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.header-nav{
+    background: #3e3a3a;
+    padding: 0 10px;
+    margin-top: 0;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 0;
+}
+.header-nav a:hover{
+    background: #837979;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+/*************** MAIN ******************/
+
+.main-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.goods-container, .category-list{
+    /*background: #898989;*/
+}
+
+.goods-container{
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.category-list{
+    max-width: 240px;
+}
+
+.goods-element{
+    max-width: 32%;
+    background: #fff;
+    box-shadow: 1px 1px 4px rgba(199, 199, 199, 0.3);
+    margin: 0 10px 10px 0;
+    position: relative;
+}
+
+.goods-element img{
+    display: block;
+    max-height: 200px;
+    margin: 0 auto;
+}
+
+.sale{
+    position: absolute;
+    top: 0;
+    background: #e63b3b;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.buy-link{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    
+}
+
+.buy-link a{
+    position: absolute;
+    display: block;
+    padding: 15px 25px;
+    background: #16b792;
+    color: #fff;
+    text-decoration: none;
+    top: 40%;
+    left: 30%;
+}
+.buy-link a:hover{
+    background: #169eb7;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.buy-link:hover{
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.category-list menu a{
+    display: block;
+    padding: 15px 25px;
+    margin-bottom: 10px;
+    background: #16b792;
+    color: #fff;
+    text-decoration: none;
+}
+.category-list menu a:hover{
+    background: #169eb7;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+
+
+
+/******* MEDIA ***********/
+
+/* 1024 */
+
+@media (max-width: 1024px) {
+    .goods-element{
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 810px) {
+    .goods-element{
+        max-width: 100%;
+    }
+    .header-nav{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+    .main-flex{
+        flex-wrap: wrap;
+    }
+    #nav-list{
+        flex-direction: column;
+    }
+    
+    .category-list{
+        width: 100%;
+        order: 1;
+    }
+    .category-list menu h2{
+        display: none;
+    }
+    .category-list menu a{
+        display: inline-block;
+        max-width: 97px;
+    }
+    .category-list menu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        
+    }
+    .goods-container{
+        width: 100%;
+        order: 2;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
